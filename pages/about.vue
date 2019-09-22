@@ -2,7 +2,7 @@
   <div :style="{backgroundColor:'white'}">
     <div class="black--text">
       <h1 class="xd-about-text">ABOUT</h1>
-      <v-img :src="require('~/assets/about_img_top1.svg')" class="xd-imgtop1" />
+      <img src="~/assets/about_img_top1.svg" class="xd-imgtop1" />
       <p class="xd-text-top1">{{text_top1}}</p>
       <p class="xd-text-top2">{{text_top2}}</p>
     </div>
