@@ -2,7 +2,7 @@
   <div :style="{backgroundColor:'white'}">
     <div class="black--text">
       <h1 class="xd-about-text">ABOUT</h1>
-      <v-img :src="require('../assets/about_img_top1.svg')" class="xd-imgtop1" />
+      <v-img :src="require('~/assets/about_img_top1.svg')" class="xd-imgtop1" />
       <p class="xd-text-top1">{{text_top1}}</p>
       <p class="xd-text-top2">{{text_top2}}</p>
     </div>
@@ -19,7 +19,7 @@
     </svg>
     <div :style="{backgroundColor:'black',paddingTop:'91.5px',marginTop:'5px',height: '900px'}">
       <div>
-        <v-img :src="require('../assets/web_developer.svg')" class="xd-img-web-developer" />
+        <v-img :src="require('~/assets/web_developer.svg')" class="xd-img-web-developer" />
       </div>
       <div class="pl-5">
         <div class="xd-ori-header">{{ori_header}}</div>
