@@ -1,12 +1,5 @@
 <template>
   <v-app :style="{backgroundColor:'transparent'}">
-    <v-app-bar :elevation="0" color="transparent" :style="{maxHeight:'64px',  paddingTop:'12px'}">
-      <v-toolbar-title>
-        <v-img class="xd-image-logo mt-4" contain :src="require('~/assets/odstudiologo.png')" />
-      </v-toolbar-title>
-      <v-spacer />
-      <div :style="{height:'24px',width:'24px',backgroundColor:'black',borderRadius:'50%'}" />
-    </v-app-bar>
     <v-content>
       <nuxt />
     </v-content>

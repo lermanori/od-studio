@@ -1,5 +1,12 @@
 <template>
   <div :style="{backgroundColor:'white'}">
+    <v-app-bar :elevation="0" color="transparent" :style="{maxHeight:'64px',  paddingTop:'12px'}">
+      <v-toolbar-title>
+        <v-img class="xd-image-logo mt-4" contain :src="require('~/assets/odstudiologo.png')" />
+      </v-toolbar-title>
+      <v-spacer />
+      <div :style="{height:'24px',width:'24px',backgroundColor:'black',borderRadius:'50%'}" />
+    </v-app-bar>
     <div class="black--text">
       <h1 class="xd-about-text">ABOUT</h1>
       <img src="~/assets/about_img_top1.svg" class="xd-imgtop1" />
@@ -61,6 +68,11 @@ export default {
 </script>
 
 <style scoped>
+.xd-image-logo {
+  width: 170px;
+  height: 129px;
+  opacity: 1;
+}
 .xd-about-text {
   position: relative;
   width: 108px;
