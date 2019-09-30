@@ -1,12 +1,6 @@
 <template>
   <div :style="{backgroundColor:'white'}">
-    <v-app-bar :elevation="0" color="transparent" :style="{maxHeight:'64px',  paddingTop:'12px'}">
-      <v-toolbar-title>
-        <v-img class="xd-image-logo mt-4" contain :src="require('~/assets/odstudiologo.png')" />
-      </v-toolbar-title>
-      <v-spacer />
-      <div :style="{height:'24px',width:'24px',backgroundColor:'black',borderRadius:'50%'}" />
-    </v-app-bar>
+    <app-header :mode="'basic-negative'" />
     <div class="black--text">
       <h1 class="xd-about-text">ABOUT</h1>
       <img src="~/assets/about_img_top1.svg" class="xd-imgtop1" />
@@ -32,14 +26,14 @@
         <div class="xd-ori-header">{{ori_header}}</div>
         <div class="xd-ori-title">{{ori_title}}</div>
         <div :style="{height:'249px',width:'304px'}">
-          <p :style="{fontWeight:'100'}">{{ori_description}}</p>
+          <p :style="{fontWeight:'100',color:'white'}">{{ori_description}}</p>
         </div>
       </div>
       <div class="pl-5">
         <div class="xd-ori-header">{{dani_header}}</div>
         <div class="xd-ori-title">{{dani_title}}</div>
         <div :style="{height:'249px',width:'304px'}">
-          <p :style="{fontWeight:'100'}">{{dani_description}}</p>
+          <p :style="{fontWeight:'100',color:'white'}">{{dani_description}}</p>
         </div>
       </div>
     </div>
@@ -47,6 +41,7 @@
 </template>
 
 <script>
+import appHeader from "../components/header";
 export default {
   data() {
     return {
@@ -63,11 +58,14 @@ export default {
       dani_description:
         "Daniela does the art & design. After being the graphic and social media designer for businesses such as the Pasaz Club and Beit Hapsanter, Daniela got into the UX&UI world. Now she can design (or re-design) your new website, and make it full of style, well designed and user friendly."
     };
+  },
+  components: {
+    appHeader
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .xd-image-logo {
   width: 170px;
   height: 129px;
@@ -131,6 +129,8 @@ export default {
   opacity: 1;
 }
 .xd-ori-title {
+  p {
+  }
   width: 152px;
   height: 27.5px;
   font-size: 15px;

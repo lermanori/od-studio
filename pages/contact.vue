@@ -1,16 +1,6 @@
 <template>
   <div :style="{backgroundColor:'white',overflowX:'hidden'}">
-    <v-app-bar
-      :elevation="0"
-      color="black"
-      :style="{maxHeight:'128px', height:'128' , paddingTop:'12px'}"
-    >
-      <v-toolbar-title>
-        <v-img class="xd-image-logo mt-4" contain :src="require('~/assets/odstudiologowhite.png')" />
-      </v-toolbar-title>
-      <v-spacer />
-      <div :style="{height:'24px',width:'24px',backgroundColor:'white',borderRadius:'50%'}" />
-    </v-app-bar>
+    <app-header :mode="'basic'" />
     <div class="mobile">
       <div class="app-particles">
         <app-particles />
@@ -80,9 +70,11 @@
 
 <script>
 import VueParticles from "../components/particles";
+import appHeader from "../components/header";
 export default {
   components: {
-    "app-particles": VueParticles
+    "app-particles": VueParticles,
+    appHeader
   },
   methods: {
     handle_submit() {
