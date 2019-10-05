@@ -1,0 +1,123 @@
+@include for-big-desktop-up {
+  .first-text-line {
+    @include calculateResponsiveBox($stroke: 0.7px white,
+      $fontSize: 190px,
+      $top: 185px,
+      $left: -58px,
+      $boxHeight: 214px);
+  }
+
+  .second-text-line {
+    font-size: 190px;
+    top: 130px;
+    left: -16.5px;
+
+    .second-line-typo {
+      height: 210px;
+    }
+  }
+
+  .circle {
+    @include sizes($top: 570px, $left: 55vw, $width: 25vw, $height: 25vw);
+  }
+
+  .section2-text1 {
+    @include boxSize($width: 100vw,
+      $height: 69px,
+      $top: 100px,
+      $left: 40px,
+      $paddingLeft: 18px,
+      $fontSize: 90px);
+  }
+
+  .section2-text2 {
+    @include boxSize($width: 40vw,
+      $height: 480px,
+      $top: 320px,
+      $left: 50vw,
+      $paddingLeft: 18.5px,
+      $fontSize: 78px);
+    line-height: 80px
+  }
+
+  .main-section-3 {
+    .header {
+      //resp
+      text-align: center;
+      font-size: 150px;
+      padding: 10px;
+      line-height: 205px;
+
+    }
+
+    //resp
+    .subheading {
+      width: 53vw;
+      margin: 0 auto;
+      font-size: 40px;
+      padding: 0 20px;
+      line-height: 49px;
+      font-weight: 400;
+    }
+  }
+
+  .lines {
+    transform: translate(430px, -90px) scale(0.5);
+  }
+
+  ul {
+    //resp
+    margin-left: 57.5%;
+    margin-top: -135px;
+
+    li {
+      //resp
+      width: 520px;
+      font-size: 70px;
+      line-height: 55px;
+      margin-bottom: 35px;
+
+      span {
+        //resp
+        font-weight: 300;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .v-image {
+    //resp
+    margin-top: -15px;
+    width: 281px;
+    margin-left: 49px;
+  }
+
+  .section-4 {
+    .view-more {
+      //resp
+      font-size: 35px;
+      padding-top: 15px;
+      padding-right: 35px;
+    }
+
+    .header {
+      //resp
+      text-align: center;
+      font-size: 150px;
+      padding: 10px;
+      line-height: 157px;
+      margin-top: 30px;
+      letter-spacing: -1.8px;
+
+    }
+
+    .subheading {
+      //resp
+      font-size: 40px;
+      padding: 0 30px;
+      line-height: 49px;
+      margin: 0 auto;
+      width: 90vw;
+    }
+  }
+}

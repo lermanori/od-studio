@@ -1,0 +1,136 @@
+@include for-desktop-up {
+  .first-text-line {
+    @include calculateResponsiveBox($stroke: 0.7px white,
+      $fontSize: 190px,
+      $top: 160px,
+      $left: -58px,
+      $boxHeight: 224px);
+  }
+
+  .second-text-line {
+    font-size: 190px;
+    top: 110px;
+    left: -16.5px;
+
+    .second-line-typo {
+      height: 215px;
+    }
+  }
+
+  .circle {
+    @include sizes($top: 300px, $left: 55vw, $width: 25vw, $height: 25vw);
+  }
+
+  .section2-text1 {
+    @include boxSize($width: 100vw,
+      $height: 69px,
+      $top: 00px,
+      $left: 40px,
+      $paddingLeft: 198px,
+      $fontSize: 50px);
+    line-height: 75px;
+  }
+
+  .section2-text2 {
+    @include boxSize($width: 50vw,
+      $height:520px,
+      $top: 210px,
+      $left: 40vw,
+      $paddingLeft: 30px,
+      $fontSize: 50px);
+    line-height: 75px;
+
+  }
+
+  .main-section-3 {
+    .header {
+      //resp
+      text-align: center;
+      font-size: 180px;
+      padding: 10px;
+      line-height: 205px;
+      margin-top: -150px;
+
+      span {
+        -webkit-text-stroke-width: 2px;
+      }
+    }
+
+    //resp
+    .subheading {
+      width: 90vw;
+      margin: 0 auto;
+      font-size: 40px;
+      padding: 0 20px;
+      line-height: 49px;
+      font-weight: 400;
+    }
+  }
+
+  .lines {
+    transform: translate(520px, -85px) scale(1, 0.5);
+  }
+
+  ul {
+    //resp
+    margin-left: 970px;
+    margin-top: -135px;
+
+    li {
+      //resp
+      width: 520px;
+      font-size: 70px;
+      line-height: 55px;
+      margin-bottom: 35px;
+
+      span {
+        //resp
+        font-weight: 300;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .v-image {
+    //resp
+    margin-top: -15px;
+    width: 281px;
+    margin-left: 49px;
+  }
+
+  .section-4 {
+    .view-more {
+      //resp
+      font-size: 25px;
+      padding-top: 15px;
+      padding-right: 35px;
+    }
+
+
+
+    .header {
+      //resp
+      text-align: left;
+      margin-left: 100px;
+      font-size: 180px;
+      padding: 10px;
+      line-height: 205px;
+      margin-top: 30px;
+      letter-spacing: -1.8px;
+
+      span {
+        -webkit-text-stroke-width: 2px;
+      }
+
+    }
+
+    .subheading {
+      //resp
+      font-size: 40px;
+      padding: 0 30px;
+      line-height: 49px;
+      margin: 0 auto;
+      width: 90vw;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+$breakpoint: (mobileMax:599px,
+  tabletPortriatMin:600px,
+  tabletLandscapeMin:960px,
+  desktopMin:1264px,
+  BigdesktopMin:1904px,
+);
+$oriCheck:cyan;
+
+@function view ($view) {
+  @return map-get($breakpoint, $view)
+}
+
+;
+
+@mixin calculateResponsiveBox($stroke, $fontSize, $top, $left, $boxHeight) {
+  -webkit-text-stroke: $stroke;
+  font-size: $fontSize;
+  top: $top;
+  left: $left;
+
+  .first-text-typo {
+    height: $boxHeight;
+  }
+}
+
+@mixin for-mobile-only {
+  @media (max-width: view(mobileMax)) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: view(tabletPortriatMin)) and (max-width:view(tabletLandscapeMin)) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: view(tabletLandscapeMin)) and (max-width:view(desktopMin)) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: view(desktopMin)) and (max-width:view(BigdesktopMin)) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: view(BigdesktopMin)) {
+    @content;
+  }
+}

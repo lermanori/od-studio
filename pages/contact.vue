@@ -151,7 +151,7 @@ export default {
   mix-blend-mode: difference;
 }
 .mobile {
-  width: 375px;
+  width: 100vw;
   height: 1348px;
   background-color: black;
 }

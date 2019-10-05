@@ -66,26 +66,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/ori-var";
+
 .xd-image-logo {
   width: 170px;
   height: 129px;
   opacity: 1;
 }
 .xd-about-text {
-  position: relative;
-  width: 108px;
-  height: 46px;
-  top: 46px;
-  left: 290px;
-  /* margin-top: 35px; */
-  margin-bottom: 35px;
-  transform: matrix(0, 1, -1, 0, 0, 0);
-  /* margin-left: 290.5px; */
-  font: Bold 30px/40px Segoe UI;
-  letter-spacing: -0.6px;
-  color: white;
-  -webkit-text-stroke: 1.3px black;
-  opacity: 1;
+  @include for-big-desktop-up {
+    color: black;
+  }
+  @include for-desktop-up {
+    color: red;
+  }
+  @include for-tablet-landscape-up {
+    color: green;
+  }
+  @include for-tablet-portrait-up {
+    color: cyan;
+  }
+  @include for-mobile-only {
+    position: relative;
+    width: 108px;
+    height: 46px;
+    top: 46px;
+    left: 290px;
+    /* margin-top: 35px; */
+    margin-bottom: 35px;
+    transform: matrix(0, 1, -1, 0, 0, 0);
+    /* margin-left: 290.5px; */
+    font: Bold 30px/40px Segoe UI;
+    letter-spacing: -0.6px;
+    color: white;
+    -webkit-text-stroke: 1.3px black;
+    opacity: 1;
+  }
 }
 .xd-imgtop1 {
   width: 315px;
@@ -129,8 +145,6 @@ export default {
   opacity: 1;
 }
 .xd-ori-title {
-  p {
-  }
   width: 152px;
   height: 27.5px;
   font-size: 15px;

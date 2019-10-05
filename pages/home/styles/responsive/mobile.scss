@@ -1,0 +1,138 @@
+@include for-mobile-only {
+  .first-text-line {
+    @include calculateResponsiveBox($stroke: 0.5px white,
+      $fontSize: 85px,
+      $top: 155px,
+      $left: -58px,
+      $boxHeight: 104px);
+  }
+
+  .second-text-line {
+    font-size: 85px;
+    margin-top: -10px;
+    top: 140px;
+    left: -16.5px;
+
+    .second-line-typo {
+      height: 100px;
+    }
+  }
+
+  .circle {
+    @include sizes($top: 320px, $left: 50vw, $width: 35vw, $height: 35vw);
+  }
+
+  .section2-text1 {
+    @include boxSize($width: 100vw,
+      $height: 69px,
+      $top: 30px,
+      $left: 00px,
+      $paddingLeft: 18px,
+      $fontSize: 20px);
+  }
+
+  .section2-text2 {
+    @include boxSize($width: 220px,
+      $height: 350px,
+      $top: 70px,
+      $left: 35vw,
+      $paddingLeft: 18.5px,
+      $fontSize: 20px);
+  }
+
+  .main-section-3 {
+    .header {
+      //resp
+      font-size: 45px;
+      padding: 10px;
+      //base
+      color: #FFAA9C;
+      line-height: 40px;
+
+      span {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+      }
+    }
+
+    //resp
+    .subheading {
+      font-size: 20px;
+      padding: 0 20px;
+      line-height: 29px;
+    }
+  }
+
+  ul {
+    //base
+    color: white;
+    //resp
+    margin-left: 80px;
+    margin-top: 5px;
+
+    li {
+
+      //resp
+      width: 220px;
+      font-size: 60px;
+      line-height: 25px;
+      margin-bottom: 50px;
+
+
+      span {
+        //base
+        vertical-align: top;
+        font-weight: 300;
+        //resp
+        font-size: 20px;
+      }
+    }
+  }
+
+  .v-image {
+    //resp
+    margin-top: -15px;
+    width: 281px;
+    margin-left: 49px;
+  }
+
+  .section-4 {
+    .view-more {
+      //base
+      text-align: right;
+      text-decoration: underline;
+      text-underline-position: under;
+      font-weight: 500;
+      //resp
+      font-size: 15px;
+      padding: 15px;
+    }
+
+    .header {
+      //resp
+      font-size: 45px;
+      padding: 10px;
+      line-height: 40px;
+      margin-top: 30px;
+      letter-spacing: -1.8px;
+      //base
+      color: #FFAA9C;
+
+      span {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+      }
+    }
+
+    .subheading {
+      //resp
+      font-size: 20px;
+      padding: 0 20px;
+      line-height: 29px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+  }
+
+
+}

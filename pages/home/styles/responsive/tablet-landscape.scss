@@ -1,0 +1,120 @@
+@include for-tablet-landscape-up {
+  .first-text-line {
+    @include calculateResponsiveBox($stroke: 0.7px white,
+      $fontSize: 90px,
+      $top: 183px,
+      $left: -58px,
+      $boxHeight: 104px);
+  }
+
+  .second-text-line {
+    font-size: 90px;
+    top: 160px;
+    left: -16.5px;
+
+    .second-line-typo {
+      height: 110px;
+    }
+  }
+
+  .circle {
+    @include sizes($top: 570px, $left: 55vw, $width: 25vw, $height: 25vw);
+  }
+
+  .section2-text1 {
+    @include boxSize($width: 100vw,
+      $height: 69px,
+      $top: 00px,
+      $left: 40px,
+      $paddingLeft: 18px,
+      $fontSize: 30px);
+  }
+
+  .section2-text2 {
+    @include boxSize($width: 400px,
+      $height: 190px,
+      $top: 60px,
+      $left: 30vw,
+      $paddingLeft: 18.5px,
+      $fontSize: 28px);
+    line-height: 40px
+  }
+
+  .main-section-3 {
+    .header {
+      //resp
+      text-align: center;
+      font-size: 55px;
+      padding: 10px;
+      line-height: 55px;
+
+    }
+
+    //resp
+    .subheading {
+      width: 550px;
+      margin: 0 auto;
+      font-size: 30px;
+      padding: 0 20px;
+      line-height: 39px;
+    }
+  }
+
+  .lines {
+    transform: translateX(140px);
+  }
+
+  ul {
+    //resp
+    margin-left: 44.5%;
+    margin-top: 5px;
+
+    li {
+      //resp
+      width: 220px;
+      font-size: 60px;
+      line-height: 35px;
+      margin-bottom: 10px;
+
+      span {
+        //resp
+        font-size: 30px;
+      }
+    }
+  }
+
+  .v-image {
+    //resp
+    margin-top: -15px;
+    width: 281px;
+    margin-left: 49px;
+  }
+
+  .section-4 {
+    .view-more {
+      //resp
+      font-size: 15px;
+      padding: 15px;
+    }
+
+    .header {
+      //resp
+      text-align: center;
+      font-size: 45px;
+      padding: 10px;
+      line-height: 40px;
+      margin-top: 30px;
+      letter-spacing: -1.8px;
+
+    }
+
+    .subheading {
+      //resp
+      font-size: 20px;
+      padding: 0 30px;
+      line-height: 29px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+  }
+}

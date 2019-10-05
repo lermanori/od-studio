@@ -1,0 +1,3 @@
+@function view ($view) {
+  @return map-get($breakpoint, $view)
+}

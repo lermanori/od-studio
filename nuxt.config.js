@@ -1,10 +1,19 @@
 const colors = require('vuetify/es5/util/colors').default
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+
+
+const routerBase = {
   router: {
-    base: '/od-studio/'
-  }
-} : {}
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/od-studio/' : '/',
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'home',
+        path: '/',
+        component: resolve(__dirname, 'pages/home/index.vue')
+      })
+    }
+  },
+}
 
 module.exports = {
   ...routerBase,
